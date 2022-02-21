@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_HomePage.cshtml";
+}
+
+<h2>Edit</h2>
+<form action="/News/Edit" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="text" name="Title " Value="@Model.Title" class="form-control" placeholder="Title" />
+    <input type="text" name="Description " Value="@Model.Description" class="form-control" placeholder="Description" />
+    <input type="text" name="Category " Value="@Model.Category " class="form-control" placeholder="Catagory" />
+    <input type="text" name="Publish " Value="@Model.Publish" class="form-control" placeholder="Date" />
+    <input type="submit" value="Edit" />
+</form>

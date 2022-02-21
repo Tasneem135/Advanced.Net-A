@@ -1,0 +1,24 @@
+﻿@model StudenForm.Models.Student
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+@if(Model !=null)
+{
+    <h2>@Model.Name</h2>
+}
+<h2>Create</h2>
+<form action="/Student/Create " method="POST">
+
+    <input type="text" name="Name" value="@Model.Name" placeholder="NAME" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })<br />
+    <input type="text" name="Id" value="@Model.Id" placeholder="ID" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })<br />
+    <input type="text" name="Dob" value="@Model.Dob" placeholder="Date Of Birth" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Dob, "", new { @class = "text-danger" })<br />
+    <input type="text" name="Email" value="@Model.Email" placeholder="Email" class="form-control" />
+    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })<br />
+    <input type="submit" value="Submit" />
+
+</form>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    <title>Product List</title>
+</head>
+<body>
+    <div><a href="/Product/Home" class="btn btn-success">Home</a> <a href="/Product/List" class="btn btn-danger">List</a></div>
+    <div>
+        @RenderBody()
+    </div>
+    <div>&copy; 2021-2022</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div><h4>Student Form</h4></div>
+    <div><a href="/Product/Home" class="btn btn-success">Home</a> <a href="/Product/List" class="btn btn-danger">List</a></div>
+    <div>
+        @RenderBody()
+    </div>
+    <div>&copy;2021-2022</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@model List<NewsTask.Models.DataBase.News>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HomePage.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Publish_Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    @foreach (var n in Model)
+    {
+        <tr>
+            <td>@n.Id</td>
+            <td>@n.Title</td>
+            <td>@n.Description</td>
+            <td>@n.Category</td>
+            <td>@n.Publish</td>
+            <td><a class="btn btn-info" href="/News/Edit/@n.Id">Edit</a></td>
+            <td><a class="btn btn-danger" href="/News/Delete/@n.Id">Delete</a></td>
+        </tr>
+    }
+</table>
+
